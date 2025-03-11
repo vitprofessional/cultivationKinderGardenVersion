@@ -123,7 +123,7 @@
                     <p><i class="fa-solid fa-phone-office"></i> 0123 4567 890</p>
                     <p><i class="fa-solid fa-envelopes"></i> sbccumilla@gmail.com</p>
                     <p><i class="fa-brands fa-square-whatsapp"></i> 0123 4567 890</p>
-                    <p><i class="fa-brands fa-square-facebook"></i> Sonar Bangla College</p>
+                    <p><i class="fa-brands fa-square-facebook"></i> {{ $website_name }}</p>
                     <p><i class="fa-solid fa-buildings"></i> Poyat, Gobindapur, Vorasar, Burichong, Cumilla</p>
                 </div>
                 <div class="col-12 col-md-5 mx-auto">
