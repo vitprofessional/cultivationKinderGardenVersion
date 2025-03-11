@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\newAdmission;
 use App\Models\classManage;
 use App\Models\sectionManage;
-use App\Models\Department;
 use File;
 
 
@@ -80,7 +79,6 @@ class admissionController extends Controller
             $data->phone            = $requ->phone;
             $data->sessName         = $requ->sessName;
             $data->className        = $requ->className;
-            $data->departmentName   = $requ->departmentName;
             $data->sectionName      = $requ->sectionName;
             $data->rollNumber       = $requ->rollNumber;
             $data->gurdianName      = $requ->gurdian;
@@ -122,7 +120,6 @@ class admissionController extends Controller
         
         $classDetails = classManage::all();
         $sectionDetails= sectionManage::all();
-        $departmentDetails= Department::all();
         $stdDataa= newAdmission::find($id);
         return view('cultivation.edit-student',['classDetails'=>$classDetails,'sectionDatails'=>$sectionDetails,'stdData'=>$stdDataa]);
     }
@@ -145,7 +142,6 @@ class admissionController extends Controller
                 $data->phone            = $requ->phone;
                 $data->sessName         = $requ->sessName;
                 $data->className        = $requ->className;
-                $data->departmentName   = $requ->departmentName;
                 $data->sectionName      = $requ->sectionName;
                 $data->rollNumber       = $requ->rollNumber;
                 $data->gurdianName      = $requ->gurdian;

@@ -7,7 +7,6 @@ use App\Models\sessionManage;
 use App\Models\classManage;
 use App\Models\sectionManage;
 use App\Models\feesManager;
-use App\Models\Department;
 class individualController extends Controller
 {
     //add session
@@ -138,74 +137,6 @@ class individualController extends Controller
     //delelte class
     public function delClass($id){
         $dltData = classManage::find($id);
-
-        if($dltData->delete()):
-            return back()->with('success','data Delete successfully');
-        else:
-            return back()->with('error','data deletion failed');
-        endif;
-    
-     }
-
-     //add Department
-    public function createDepartment(){
-        return view('result.new-department');
-    }
-
-
-    //save section 
-    public function confirmDepartment(Request $requ){
-       $chkData = Department::where(['departmentName'=>$requ->departmentName])->get();
-
-        if(!empty($chkData) && count($chkData)>0):
-            return back()->with('error','Data entry failed');
-        else:
-            $savedata = new Department();
-            
-            $savedata -> departmentName = $requ->departmentName;
-
-            if($savedata->save()):
-                return back()->with('success','Data saved successfully');
-            else:
-                return back()->with('error','An error ocoured! please try later');
-            endif;
-        endif;
-        
-    }
-
-    public function allDepartment(){
-        $itemData = Department::orderBy('id','DESC')->get();
-        return view('result.departmentList',['itemData'=>$itemData]);
-    }
-
-    //edit section
-    public function editDepartment($item){
-        $itemData = Department::find($item);
-        return view('result.edit-department',['item'=>$itemData]);
-    }
-
-    //update section 
-    public function updateDepartment(Request $requ){
-        $chkData = Department::where(['departmentName'=>$requ->departmentName])->get();
-
-        if($chkData->isEmpty() && $chkData->count()>0):
-            return back()->with('error','Data entry failed');
-        else:
-            $updateData =  Department::find($requ->itemId);
-            $updateData ->departmentName = $requ->departmentName;
-
-            if($updateData->save()):
-                return back()->with("success",'update successfully');
-            else:
-                return back()->with("error",'Data update failed');
-            endif;
-        endif;
-    
-    }
-
-    //delelte section
-    public function delDepartment($id){
-        $dltData = Department::find($id);
 
         if($dltData->delete()):
             return back()->with('success','data Delete successfully');

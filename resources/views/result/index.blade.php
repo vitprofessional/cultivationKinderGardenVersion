@@ -9,9 +9,6 @@ Dashboard
                         <a href="{{ route('createClass') }}" class="btn btn-secondary btn-lg p-3 h3"><i class="fa-sharp fa-solid fa-rhombus"></i> New Class</a>
                     </div>
                     <div class="col-2">
-                        <a href="{{ route('createDepartment') }}" class="btn btn-secondary btn-lg p-3 h3"><i class="fa-sharp fa-solid fa-rhombus"></i> New Deperment</a>
-                    </div>
-                    <div class="col-2">
                         <a href="{{ route('createSection') }}" class="btn btn-secondary btn-lg p-3 h3"><i class="fa-sharp fa-solid fa-rhombus"></i> New Section</a>
                     </div>
                     <div class="col-2">

@@ -153,7 +153,6 @@ Edit Student
                                             $sessionData  = \App\Models\sessionManage::find($stdData->sessName);
                                             $classData  = \App\Models\classManage::find($stdData->className);
                                             $sectionData  = \App\Models\sectionManage::find($stdData->sectionName);
-                                            $departmentData  = \App\Models\department::find($stdData->departmentName);
                                         @endphp
                                         <label>Session *</label>
                                         <select class="select2" name="sessName" >
@@ -176,19 +175,6 @@ Edit Student
                                         @if(!empty($classDetails) && count($classDetails)>0)
                                             @foreach($classDetails as $cd)
                                             <option value="{{ $cd->id}}">{{ $cd->className}}</option>
-                                            @endforeach
-                                        @endif
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Department *</label>
-                                        <select class="select2" name="departmentName" >
-                                        @if(!empty($departmentData))
-                                        <option value="{{$departmentData->id}}">{{$departmentData->departmentName}} </option>
-                                        @endif
-                                        @if(!empty($departmentDetails) && count($departmentDetails)>0)
-                                            @foreach($departmentDetails as $dd)
-                                            <option value="{{ $cd->id}}">{{ $dd->departmentName}}</option>
                                             @endforeach
                                         @endif
                                         </select>

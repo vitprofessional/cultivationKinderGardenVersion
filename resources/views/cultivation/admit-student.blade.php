@@ -178,19 +178,6 @@ New Admission
                                                 @endforeach
                                             @endif
                                         </select>
-                                    </div><div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Department *</label>
-                                        <select class="select2" name="departmentName" >
-                                            <option value="">Select *</option>
-                                            @php 
-                                                $departmentDetails = \App\Models\Department::all();
-                                            @endphp
-                                            @if(!empty($departmentDetails) && count($departmentDetails)>0)
-                                            @foreach($departmentDetails as $sd)
-                                                <option value="{{ $sd->id }}">{{ $sd->departmentName}}</option>
-                                                @endforeach
-                                            @endif
-                                        </select>
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Section/Group *</label>

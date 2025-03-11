@@ -55,20 +55,6 @@
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i
-                                    class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Department</span></a>
-                            <ul class="nav sub-group-menu">
-                                <li class="nav-item">
-                                    <a href="{{ route('allDepartment') }}" class="nav-link"><i class="fas fa-angle-right"></i>All
-                                    Department</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('createDepartment') }}" class="nav-link"><i class="fas fa-angle-right"></i>Add New
-                                    Department</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i
                                     class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Section</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">

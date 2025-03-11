@@ -788,33 +788,6 @@ Route::get('/class/list',[
 ])->name('allClasses');
 
 
-//Department route declaration
-
-Route::get('/department/create',[
-    individualController::class ,
-    'createDepartment'
-])->name('createDepartment');
-Route::post('/department/create/confirm',[
-    individualController::class ,
-    'confirmDepartment'
-])->name('confirmDepartment');
-Route::get('/department/edit/{itemId}',[
-    individualController::class ,
-    'editDepartment'
-])->name('editDepartment');
-Route::post('/department/edit/confirm',[
-    individualController::class ,
-    'updateDepartment'
-])->name('updateDepartment');
-Route::get('/department/del/{itemId}',[
-    individualController::class ,
-    'delDepartment'
-])->name('delDepartment');
-
-Route::get('/department/list',[
-    individualController::class ,
-    'allDepartment'
-])->name('allDepartment');
 
 //Section route declaration
 

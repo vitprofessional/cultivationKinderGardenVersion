@@ -19,7 +19,6 @@
                             $sectionData  = \App\Models\sectionManage::find($std->sectionName);
                             $classData  = \App\Models\classManage::find($std->className);
                             $classData  = \App\Models\classManage::find($std->className);
-                            $departmentData  = \App\Models\Department::find($std->departmentName);
                                 if(null !== $sessionData && $sessionData->count()>0){
                                     $sessionName= $sessionData->session;
                                 }else{
@@ -31,13 +30,6 @@
                                 }else{
                                     $className= '-';
                                 }
-
-                                if(null !== $departmentData && $departmentData->count()>0){
-                                    $departmentName = $departmentData->departmentName;
-                                }else{
-                                    $departmentName= '-';
-                                }
-
 
 
 
@@ -71,7 +63,7 @@
                                                             <p class="mb-0"><span class="fw-bold"> Name:</span> {{ $std->fullName }} {{ $std->lastName }}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Roll Number:</span> {{ $std->rollNumber}}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Class:</span> {{ $className}}</p>
-                                                            <p class="mb-0"><span class="fw-bold"> Department:</span> {{ $departmentName}}</p>
+                                                            
                                                             <p class="mb-0">
                                                                 <span class="fw-bold"> Session:</span> {{ $sessionName}}</p>
                                                         </div>
@@ -111,8 +103,7 @@
                                                             <p class="mb-0"><span class="fw-bold"> Name:</span> {{ $std->fullName }} {{ $std->lastName }}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Roll Number:</span> {{ $std->rollNumber}}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Class:</span> {{ $className }}</p>
-                                                            <p class="mb-0">
-                                                            <span class="fw-bold"> Department:</span> {{ $departmentName}}</p>
+                                                            
                                                             <p class="mb-0">
                                                                 <span class="fw-bold"> Session:</span> {{ $sessionName }}</p>
                                                         </div>
@@ -152,7 +143,7 @@
                                                             <p class="mb-0"><span class="fw-bold"> Name:</span> {{ $std->fullName }} {{ $std->sureName }}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Roll Number:</span> {{ $std->rollNumber}}</p>
                                                             <p class="mb-0"><span class="fw-bold"> Class:</span> {{ $className }}</p>
-                                                            <p class="mb-0"><span class="fw-bold"> Department:</span> {{ $departmentName}}</p>
+                                                            
                                                             <p class="mb-0">
                                                                 <span class="fw-bold"> Session:</span> {{ $sessionName }}</p>
                                                         </div>
