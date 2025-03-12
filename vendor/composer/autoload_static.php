@@ -5,7 +5,11 @@
 namespace Composer\Autoload;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 class ComposerStaticInit19ac8a22f3db948309775854a291a82c
+=======
+class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
+>>>>>>> Stashed changes
 =======
 class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
 >>>>>>> Stashed changes
@@ -341,8 +345,13 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Psr\\Http\\Message\\' => 
         array (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
+=======
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+>>>>>>> Stashed changes
 =======
             0 => __DIR__ . '/..' . '/psr/http-message/src',
             1 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -387,8 +396,13 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'League\\Uri\\' => 
         array (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             0 => __DIR__ . '/..' . '/league/uri',
             1 => __DIR__ . '/..' . '/league/uri-interfaces',
+=======
+            0 => __DIR__ . '/..' . '/league/uri-interfaces',
+            1 => __DIR__ . '/..' . '/league/uri',
+>>>>>>> Stashed changes
 =======
             0 => __DIR__ . '/..' . '/league/uri-interfaces',
             1 => __DIR__ . '/..' . '/league/uri',
@@ -6677,9 +6691,15 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
     {
         return \Closure::bind(function () use ($loader) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             $loader->prefixLengthsPsr4 = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$classMap;
+>>>>>>> Stashed changes
 =======
             $loader->prefixLengthsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixDirsPsr4;

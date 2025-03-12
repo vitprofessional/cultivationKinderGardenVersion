@@ -4,7 +4,11 @@
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         'reference' => '37eea5337ebc0a202e16f195bd41756f19c1950a',
+=======
+        'reference' => 'be631c449c2824f376cacf536aee42a1e3b0d131',
+>>>>>>> Stashed changes
 =======
         'reference' => 'be631c449c2824f376cacf536aee42a1e3b0d131',
 >>>>>>> Stashed changes
@@ -393,7 +397,11 @@
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             'reference' => '37eea5337ebc0a202e16f195bd41756f19c1950a',
+=======
+            'reference' => 'be631c449c2824f376cacf536aee42a1e3b0d131',
+>>>>>>> Stashed changes
 =======
             'reference' => 'be631c449c2824f376cacf536aee42a1e3b0d131',
 >>>>>>> Stashed changes
