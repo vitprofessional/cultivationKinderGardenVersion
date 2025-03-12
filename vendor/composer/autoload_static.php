@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< Updated upstream
 class ComposerStaticInit19ac8a22f3db948309775854a291a82c
+=======
+class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
+>>>>>>> Stashed changes
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -336,8 +340,13 @@ class ComposerStaticInit19ac8a22f3db948309775854a291a82c
         ),
         'Psr\\Http\\Message\\' => 
         array (
+<<<<<<< Updated upstream
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
+=======
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+>>>>>>> Stashed changes
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -377,8 +386,13 @@ class ComposerStaticInit19ac8a22f3db948309775854a291a82c
         ),
         'League\\Uri\\' => 
         array (
+<<<<<<< Updated upstream
             0 => __DIR__ . '/..' . '/league/uri',
             1 => __DIR__ . '/..' . '/league/uri-interfaces',
+=======
+            0 => __DIR__ . '/..' . '/league/uri-interfaces',
+            1 => __DIR__ . '/..' . '/league/uri',
+>>>>>>> Stashed changes
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -6662,9 +6676,15 @@ class ComposerStaticInit19ac8a22f3db948309775854a291a82c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< Updated upstream
             $loader->prefixLengthsPsr4 = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit19ac8a22f3db948309775854a291a82c::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad::$classMap;
+>>>>>>> Stashed changes
 
         }, null, ClassLoader::class);
     }

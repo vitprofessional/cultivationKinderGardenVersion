@@ -34,4 +34,8 @@ if [ -n "$bashSource" ]; then
     fi
 fi
 
+<<<<<<< Updated upstream
 "${dir}/sail" "$@"
+=======
+exec "${dir}/sail" "$@"
+>>>>>>> Stashed changes

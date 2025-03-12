@@ -176,6 +176,29 @@ Route::get('/video/delete/{id}',[
 
 //video end
 
+//Front str
+
+Route::get('/Home/Page/',[
+    InstituteController::class,
+    'frontPage'
+])->name('frontPage');
+
+Route::post('/front/details/',[
+    InstituteController::class ,
+    'frontDetails'
+])->name('frontDetails');
+
+Route::get('/education/ministar/img/del/{id}',[
+    InstituteController::class ,
+    'delEducationMinistarImg'
+])->name('delEducationMinistarImg');
+
+Route::get('/board/chairman/img/del/{id}',[
+    InstituteController::class ,
+    'delBoardChairmanImg'
+])->name('delBoardChairmanImg');
+//front end here
+
 Route::get('/institute/info/',[
     InstituteController::class,
     'insInfo'
