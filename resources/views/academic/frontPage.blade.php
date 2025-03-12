@@ -80,7 +80,7 @@ Home Page
                         <button class="btn btn-success btn-lg" type="submit">Save</button>
                     </div>
                 </form>
-            </div>
+                </div>
         </div>
     </div>
 </div>
