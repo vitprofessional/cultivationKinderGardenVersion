@@ -119,20 +119,12 @@
             <div class="row g-0">
                 <div class="col-12 col-md-5 mx-auto">
                     <h3>Contact Details</h3>
-                    <p><i class="fa-solid fa-link"></i> www.sbccumilla.edu.bd</p>
-                    <p><i class="fa-solid fa-phone-office"></i> 0123 4567 890</p>
-                    <p><i class="fa-solid fa-envelopes"></i> sbccumilla@gmail.com</p>
-                    <p><i class="fa-brands fa-square-whatsapp"></i> 0123 4567 890</p>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                    <p><i class="fa-brands fa-square-facebook"></i> {{ $website_name }}</p>
-=======
-                    <p><i class="fa-brands fa-square-facebook"></i> {{ $website }}</p>
->>>>>>> Stashed changes
-=======
-                    <p><i class="fa-brands fa-square-facebook"></i> {{ $website }}</p>
->>>>>>> Stashed changes
-                    <p><i class="fa-solid fa-buildings"></i> Poyat, Gobindapur, Vorasar, Burichong, Cumilla</p>
+                    <p><i class="fa-solid fa-link"></i> {{ url('/') }}</p>
+                    <p><i class="fa-solid fa-phone-office"></i> {{ $officeMobile }}</p>
+                    <p><i class="fa-solid fa-envelopes"></i> {{ $officeMail }}</p>
+                    <p><i class="fa-brands fa-square-whatsapp"></i> {{ $officeMobile }}</p>
+                    <p><i class="fa-brands fa-square-facebook"></i> {{ $insName }}</p>
+                    <p><i class="fa-solid fa-buildings"></i> {{ $location }}</p>
                 </div>
                 <div class="col-12 col-md-5 mx-auto">
                     <h3>Google Map</h3>
