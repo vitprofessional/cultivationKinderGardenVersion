@@ -323,10 +323,6 @@ class InstalledVersions
 
         $installed = array();
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-        $copiedLocalDir = false;
->>>>>>> Stashed changes
 =======
         $copiedLocalDir = false;
 >>>>>>> Stashed changes
@@ -339,21 +335,15 @@ class InstalledVersions
                     /** @var array{root: array{name: string, pretty_version: string, version: string, reference: string|null, type: string, install_path: string, aliases: string[], dev: bool}, versions: array<string, array{pretty_version?: string, version?: string, reference?: string|null, type?: string, install_path?: string, aliases?: string[], dev_requirement: bool, replaced?: string[], provided?: string[]}>} $required */
                     $required = require $vendorDir.'/composer/installed.php';
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
                     $installed[] = self::$installedByVendor[$vendorDir] = $required;
                     if (null === self::$installed && strtr($vendorDir.'/composer', '\\', '/') === strtr(__DIR__, '\\', '/')) {
                         self::$installed = $installed[count($installed) - 1];
 =======
-=======
->>>>>>> Stashed changes
                     self::$installedByVendor[$vendorDir] = $required;
                     $installed[] = $required;
                     if (strtr($vendorDir.'/composer', '\\', '/') === strtr(__DIR__, '\\', '/')) {
                         self::$installed = $required;
                         $copiedLocalDir = true;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
                     }
                 }
@@ -373,11 +363,7 @@ class InstalledVersions
         }
 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
         if (self::$installed !== array()) {
-=======
-        if (self::$installed !== array() && !$copiedLocalDir) {
->>>>>>> Stashed changes
 =======
         if (self::$installed !== array() && !$copiedLocalDir) {
 >>>>>>> Stashed changes
