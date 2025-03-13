@@ -42,7 +42,7 @@
                         </div>
                         <div class="mb-3 form-group">
                             <label>Description *</label>
-                            <textarea name="description" placeholder="Describe the details of the notice" class="form-control" row="12" required>{{ $description }}</textarea>
+                            <textarea name="description" placeholder="Describe the details of the slider" class="form-control" row="12" required>{{ $description }}</textarea>
                         </div>
                         <div class="mb-5">
                             <label for="avatar">Avatar(Photo)</label>
