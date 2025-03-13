@@ -65,6 +65,7 @@ return array(
     'App\\Models\\cashManage' => $baseDir . '/app/Models/cashManage.php',
     'App\\Models\\classManage' => $baseDir . '/app/Models/classManage.php',
     'App\\Models\\feesManager' => $baseDir . '/app/Models/feesManager.php',
+    'App\\Models\\frontManage' => $baseDir . '/app/Models/frontManage.php',
     'App\\Models\\newAdmission' => $baseDir . '/app/Models/newAdmission.php',
     'App\\Models\\sectionManage' => $baseDir . '/app/Models/sectionManage.php',
     'App\\Models\\session' => $baseDir . '/app/Models/session.php',
