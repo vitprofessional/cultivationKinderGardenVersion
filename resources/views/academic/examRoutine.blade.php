@@ -53,14 +53,14 @@ Exam Routine Management
                     <div class="mb-3">
                         <label for="assignClass">Class</label>
                         <select name="assignClass" class="form-select">
-                            @if(!empty($itemId))
+                        @if(!empty($itemId))
                             @php
-                                $existClass = \App\Models\Classes::find($assignClass);
+                                $existClass = \App\Models\classManage::find($assignClass);
                             @endphp
                             <option value="{{ $assignClass }}">{{ $existClass->className }}</option>
                             @endif
                             @php
-                                $classes = \App\Models\Classes::orderBy('id','DESC')->get();
+                                $classes = \App\Models\classManage::orderBy('id','DESC')->get();
                             @endphp
                             @if(!empty($classes))
                                 @foreach($classes as $cls)
@@ -74,7 +74,7 @@ Exam Routine Management
                     <div class="mb-3">
                         <label for="assignDepartment">Department</label>
                         <select name="assignDepartment" class="form-select">
-                            @if(!empty($itemId))
+                        @if(!empty($itemId))
                             @php
                                 $existDept = \App\Models\Department::find($assignDepartment);
                             @endphp
@@ -95,18 +95,18 @@ Exam Routine Management
                     <div class="mb-3">
                         <label for="assignSession">Session</label>
                         <select name="assignSession" class="form-select">
-                            @if(!empty($itemId))
+                        @if(!empty($itemId))
                             @php
-                                $existSession = \App\Models\Session::find($assignSession);
+                                $existSession = \App\Models\sessionManage::find($assignSession);
                             @endphp
-                            <option value="{{ $assignSession }}">{{ $existSession->sessionName }}</option>
+                            <option value="{{ $assignSession }}">{{ $existSession->session }}</option>
                             @endif
                             @php
-                                $session = \App\Models\Session::orderBy('id','DESC')->get();
+                                $session = \App\Models\sessionManage::orderBy('id','DESC')->get();
                             @endphp
                             @if(!empty($session))
                                 @foreach($session as $sess)
-                                <option value="{{ $sess->id }}">{{ $sess->sessionName }}</option>
+                                <option value="{{ $sess->id }}">{{ $sess->session }}</option>
                                 @endforeach
                             @else
                                 <option value="">-</option>
@@ -121,10 +121,10 @@ Exam Routine Management
                             <a href="{{ route('delExamRoutineContent',['id'=>$itemId]) }}" class="fw-bold text-danger">Delete</a>
                         </div>
                         @else
-                        <input type="file" name="attachment" class="form-control">
+                        <input type="file" name="attachment" class="form-control-file">
                         @endif
                     </div>
-                    <div class="mb-3">
+                    <div class="mt-4">
                         <button class="btn btn-success btn-lg mx-2" type="submit">Save</button>
                         <a class="btn btn-primary btn-lg mx-2" href="{{ route('examRoutineManage') }}">Create New</a>
                     </div>
@@ -150,19 +150,19 @@ Exam Routine Management
                         @endphp
                         @foreach($examRoutineList as $item)
                         @php 
-                            $itemClass      = \App\Models\Classes::find($item->assignClass);
+                        $itemClass      = \App\Models\classManage::find($item->assignClass);
                             $itemDepartment = \App\Models\Department::find($item->assignDepartment);
-                            $itemSession    = \App\Models\Session::find($item->assignSession);
+                            $itemSession    = \App\Models\sessionManage::find($item->assignSession);
                         @endphp
                             <tr>
                                 <td>{{ $x }}</td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $itemClass->className }}</td>
                                 <td>{{ $itemDepartment->departmentName }}</td>
-                                <td>{{ $itemSession->sessionName }}</td>
+                                <td>{{ $itemSession->session }}</td>
                                 <td>
-                                    <a href="{{ route('editExamRoutine',['id'=>$item->id]) }}"><i class="fa-light fa-pen-to-square fa-xl"></i></a>
-                                    <a href="{{ route('delExamRoutine',['id'=>$item->id]) }}" onclick="return confirm('Are you sure to delete?')"><i class="fa-thin fa-circle-trash fa-xl"></i></a>
+                                    <a href="{{ route('editExamRoutine',['id'=>$item->id]) }}"><i class="fa-solid fa-pen-to-square mx-2" style="color: #4125b1;"></i></a>
+                                        <a href="{{ route('delExamRoutine',['id'=>$item->id]) }}"onclick="return confirm('Are you sure you want to delete this item?');" title="Get Id Card" ><i class="fa-solid fa-trash mx-2" style="color: #c10b26;"></i></a>
                                 </td>
                             </tr>
                         @endforeach

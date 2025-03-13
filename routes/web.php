@@ -147,6 +147,35 @@ Route::get('/photo/delete/{id}',[
 
 //image end
 
+//Slider str
+
+Route::get('/institute/slider/',[
+    GalleryController::class,
+    'newSlider'
+])->name('newSlider');
+
+Route::post('/slider/save',[
+    GalleryController::class ,
+    'saveSlider'
+])->name('saveSlider');
+
+Route::get('/slider/edit/{id}',[
+    GalleryController::class ,
+    'editSlider'
+])->name('editSlider');
+
+Route::get('/slider/content/delete/{id}',[
+    GalleryController::class ,
+    'delSliderContent'
+])->name('delSliderContent');
+
+Route::get('/slider/delete/{id}',[
+    GalleryController::class ,
+    'delSlider'
+])->name('delSlider');
+
+//image end
+
 //video str
 
 Route::get('/institute/video/',[

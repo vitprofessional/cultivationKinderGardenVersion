@@ -13,6 +13,7 @@
         $exJoin     = "";
         $exRetire   = "";
         $exDesig    = "";
+        $avatar     = "";
 
         if(!empty($exId)):
             $exList       = \App\Models\ExPrincipal::find($exId);
@@ -24,6 +25,7 @@
                 $exJoin     = $exList->startFrom;
                 $exRetire   = $exList->endTo;
                 $exDesig    = $exList->designation;
+                $avatar     = $exList->avatar;
             endif;
         endif;
     @endphp
@@ -81,12 +83,23 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label for="avatar">Avatar(PDF/Photo)</label>
+                            @if(!empty($avatar))
+                            <div>
+                                <img src="{{ asset('public/upload/image/exPrincipal/').'/'.$avatar }}" class="w-25"alt="#"><br>
+                                <a href="{{ route('delexPlcCon',['id'=>$explId]) }}" class="mt-3 w-25 btn btn-danger btn-lg">Delete</a>
+                            </div>
+                            @else
+                            <input type="file" name="avatar" class="form-control-file">
+                            @endif
+                        </div>
+                        <div class="my-5">
                             <button class="btn btn-success btn-lg mx-2" type="submit">Save</button>
                             <a class="btn btn-primary btn-lg mx-2" href="{{ route('exPrincipal') }}">New Profile</a>
                         </div>
                     </form>
                 </div>
-                <div class="card-header">Ex-Principal List</div>
+                <div class="card-header mt-5">Ex-Principal List</div>
                 <div class="card-body cultivation table-responsive">
                     <table id="myTable" class="table table-striped">
                         <thead>
@@ -112,8 +125,9 @@
                                     <td>{{ $expl->startFrom }}</td>
                                     <td>{{ $expl->endTo }}</td>
                                     <td>
-                                        <a href="{{ route('editExPrincipal',['id'=>$expl->id]) }}"><i class="fa-light fa-pen-to-square fa-xl"></i></a>
-                                        <a href="{{ route('delExPrincipal',['id'=>$expl->id]) }}" onclick="return confirm('Are you sure to delete?')"><i class="fa-thin fa-circle-trash fa-xl"></i></a>
+                                        <a href="{{ route('viewExPrincipal',  ['id'=>$expl->id]) }}"><i class="fa-solid fa-eye mx-2" style="color:rgb(35 170 211);"></i></a>
+                                        <a href="{{ route('editExPrincipal',['id'=>$expl->id]) }}"><i class="fa-solid fa-pen-to-square mx-2" style="color: #4125b1;"></i></a>
+                                        <a href="{{ route('delExPrincipal',['id'=>$expl->id]) }}"onclick="return confirm('Are you sure you want to delete this item?');" title="Get Id Card" ><i class="fa-solid fa-trash mx-2" style="color: #c10b26;"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

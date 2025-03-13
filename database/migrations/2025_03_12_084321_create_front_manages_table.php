@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('educationMinistarImg')->nullable();
             $table->string('boardChairmanName')->nullable();
             $table->string('boardChairmanImg')->nullable();
+            $table->string('boardChairmanLocation')->nullable();
             $table->string('ourMission')->nullable();
             $table->timestamps();
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\PhotoGallery;
 use App\Models\VideoGallery;
+use App\Models\SliderManage;
 use Illuminate\Http\Request;
 use File;
 
@@ -126,6 +127,68 @@ class GalleryController extends Controller
         if(!empty($item)):
             if(File::exists(public_path('upload/image/VideoGallery/').$item->avatar)):
                 File::delete(public_path('upload/image/VideoGallery/').$item->avatar);
+            endif;
+            $item->delete();
+            return back()->with('success','Item deleted successfully');
+        else:
+            return back()->with('success','Item failed to delete');
+        endif;
+    }
+
+    //Slider str
+    public function newSlider(){
+        $placement = SliderManage::orderBy('id','DESC')->get();
+        return view('academic.slider',['placementList'=>$placement]);
+    }
+    public function saveSlider(Request $requ){
+        if(empty($requ->itemId)):
+            $item   = new SliderManage();
+        else:
+            $item   = SliderManage::find($requ->itemId);
+        endif;
+        $item->title          = $requ->title;
+        $item->description          = $requ->description;
+        if(!empty($requ->avatar)):
+            $stdAvatar = $requ->file('avatar');
+            $newAvatar = rand().date('Ymd').'.'.$stdAvatar->getClientOriginalExtension();
+            $stdAvatar->move(public_path('upload/image/PhotoGallery/'),$newAvatar);
+
+            $item->avatar = $newAvatar;
+        endif;
+        // $item->status        = $requ->status;
+
+        if($item->save()):
+            return back()->with('success','Item successfully saved');
+        else:
+            return back()->with('error','Item failed to save');
+        endif;
+    }
+
+    public function editSlider($id){
+        $placement = SliderManage::orderBy('id','DESC')->get();
+        return view('academic.slider',['itemId'=>$id,'placementList'=>$placement]);
+    }
+
+    public function delSliderContent($id){
+        $item = SliderManage::find($id);
+        // return public_path('upload/image/cultivation/syllabus/').$item->attachment;
+        if(!empty($item)):
+            if(File::exists(public_path('upload/image/PhotoGallery/').$item->avatar)):
+                File::delete(public_path('upload/image/PhotoGallery/').$item->avatar);
+            endif;
+            $item->avatar = NULL;
+            $item->save();
+            return back()->with('success','Item deleted successfully');
+        else:
+            return back()->with('success','Item failed to delete');
+        endif;
+    }
+
+    public function delSlider($id){
+        $item = SliderManage::find($id);
+        if(!empty($item)):
+            if(File::exists(public_path('upload/image/PhotoGallery/').$item->avatar)):
+                File::delete(public_path('upload/image/PhotoGallery/').$item->avatar);
             endif;
             $item->delete();
             return back()->with('success','Item deleted successfully');

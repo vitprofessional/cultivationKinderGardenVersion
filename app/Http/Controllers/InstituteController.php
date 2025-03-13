@@ -30,6 +30,7 @@ class InstituteController extends Controller
         $frontManage->homeHeadline            = $requ->homeHeadline;
         $frontManage->homeDetails             = $requ->homeDetails;
         $frontManage->educationMinistarName   = $requ->educationMinistarName;
+        $frontManage->boardChairmanLocation   = $requ->boardChairmanLocation;
         $frontManage->ourMission              = $requ->ourMission;
         $frontManage->boardChairmanName       = $requ->boardChairmanName;
         

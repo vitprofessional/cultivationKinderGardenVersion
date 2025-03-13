@@ -24,9 +24,8 @@
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="nav-item">
                             <a href="{{ route('cultivationIndex') }}" class="nav-link"><i class="flaticon-dashboard"></i><span>Cultivation Panel</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="{{ route('frontPage') }}" class="nav-link"><i class="fa-thin fa-database"></i> <span>Font Page</span></a>
+                        </li><li class="nav-item">
+                            <a href="{{ route('frontPage') }}" class="nav-link"><i class="flaticon-dashboard"></i><span>Front Page</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="fa-regular fa-building-flag"></i><span>Institute Info</span></a>
@@ -70,6 +69,18 @@
                             </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="fa-thin fa-database"></i> <span>Placement Cell</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route('placementCell') }}" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Job Placement</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('needyStudentPanel') }}" class="nav-link"><i class="fas fa-angle-right"></i> Job Needy Student</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="fa-sharp fa-solid fa-list-check"></i> <span>Notice</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
@@ -85,14 +96,14 @@
                             <a href="#" class="nav-link"><i class="fa-brands fa-envira"></i> <span>Gallery</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="{{ route('newNotice') }}" class="nav-link"><i
+                                    <a href="{{ route('newPhoto') }}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Photos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('noticeList') }}" class="nav-link"><i class="fas fa-angle-right"></i> Videos</a>
+                                    <a href="{{ route('newVideo') }}" class="nav-link"><i class="fas fa-angle-right"></i> Videos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('noticeList') }}" class="nav-link"><i class="fas fa-angle-right"></i> Font Slider</a>
+                                    <a href="{{ route('newSlider') }}" class="nav-link"><i class="fas fa-angle-right"></i> Slider</a>
                                 </li>
                             </ul>
                         </li>
@@ -124,6 +135,15 @@
     </div>
     
     <!-- jquery-->
+    
+    <!-- jquery-->
+    <script>
+        $(document).ready(function() {
+            $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+                $(".alert").slideUp(500);
+            });
+        });
+    </script>
     <!-- Plugins js -->
     <script src="{{ asset('/public/back-office/') }}/js/plugins.js"></script>
     <!-- Popper js -->
