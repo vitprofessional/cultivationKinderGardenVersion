@@ -57,7 +57,7 @@
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-success btn-lg mx-2" type="submit">Save</button>
-                            <a class="btn btn-primary btn-lg mx-2" href="{{ route('newSlider') }}">New Profile</a>
+                            <a class="btn btn-primary btn-lg mx-2" href="{{ route('newSlider') }}">New Slider</a>
                         </div>
                     </div>
                 </form>
