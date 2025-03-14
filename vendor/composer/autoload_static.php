@@ -336,8 +336,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -377,8 +377,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -565,6 +565,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'App\\Models\\PrincipalSpeech' => __DIR__ . '/../..' . '/app/Models/PrincipalSpeech.php',
         'App\\Models\\SemisterPlan' => __DIR__ . '/../..' . '/app/Models/SemisterPlan.php',
         'App\\Models\\ServerConfig' => __DIR__ . '/../..' . '/app/Models/ServerConfig.php',
+        'App\\Models\\SliderManage' => __DIR__ . '/../..' . '/app/Models/SliderManage.php',
         'App\\Models\\StaffManagement' => __DIR__ . '/../..' . '/app/Models/StaffManagement.php',
         'App\\Models\\StudentManagement' => __DIR__ . '/../..' . '/app/Models/StudentManagement.php',
         'App\\Models\\Subject' => __DIR__ . '/../..' . '/app/Models/Subject.php',

@@ -55,6 +55,7 @@ return array(
     'App\\Models\\PrincipalSpeech' => $baseDir . '/app/Models/PrincipalSpeech.php',
     'App\\Models\\SemisterPlan' => $baseDir . '/app/Models/SemisterPlan.php',
     'App\\Models\\ServerConfig' => $baseDir . '/app/Models/ServerConfig.php',
+    'App\\Models\\SliderManage' => $baseDir . '/app/Models/SliderManage.php',
     'App\\Models\\StaffManagement' => $baseDir . '/app/Models/StaffManagement.php',
     'App\\Models\\StudentManagement' => $baseDir . '/app/Models/StudentManagement.php',
     'App\\Models\\Subject' => $baseDir . '/app/Models/Subject.php',

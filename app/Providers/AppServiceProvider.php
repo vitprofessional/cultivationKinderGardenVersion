@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
                 $insName            = $serverData->institueName;
                 $location           = $serverData->address;
                 $officeMobile       = $serverData->officeMobile;
+                $principalMobile    = $serverData->principalMobile;
+                $principalMail      = $serverData->principalMail;
                 $officeMail         = $serverData->officeEmail;
                 $principalSign      = $serverData->principalSign;
                 $logo               = $serverData->logo;
@@ -40,15 +42,17 @@ class AppServiceProvider extends ServiceProvider
                 $insName            = "Sonar Bangla College";
                 $location           = "Poyat, Burichong, Cumilla";
                 $officeMobile       = "01716841785";
-                $officeMail         = "";
+                $officeMail         = "office@gmail.com";
+                $principalMobile    = "01755048017";
+                $principalMail      = "principal@gmail.com";
                 $principalSign      = "";
                 $logo               = "";
                 $favicon            = "";
                 $avatar             = "";
                 $einNumber          = "434713";
-                $establishDate      = "";
+                $establishDate      = "1999";
             endif;
-            $view->with(['serverId'=>$serverId,'insName'=>$insName,'location'=>$location,'officeMobile'=>$officeMobile,'officeMail'=>$officeMail,'logo'=>$logo,'favicon'=>$favicon,'einNumber'=>$einNumber,'establishDate'=>$establishDate]);
+            $view->with(['serverId'=>$serverId,'insName'=>$insName,'location'=>$location,'officeMobile'=>$officeMobile,'officeMail'=>$officeMail,'logo'=>$logo,'favicon'=>$favicon,'einNumber'=>$einNumber,'establishDate'=>$establishDate,'principalMobile'=>$principalMobile,'principalMail'=>$principalMail]);
         });
     }
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Sonar Bangla College | @yield('fronttitle')</title>
+        <title>{{ $insName }} | @yield('fronttitle')</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <link href="{{ asset('/public/') }}/assets/css/custom.css" rel="stylesheet" />
         <link href="{{ asset('/public/') }}/assets/css/style.css" rel="stylesheet" />
@@ -120,7 +120,7 @@
                 <div class="col-12 col-md-5 mx-auto">
                     <h3>Contact Details</h3>
                     <p><i class="fa-solid fa-link"></i> {{ url('/') }}</p>
-                    <p><i class="fa-solid fa-phone-office"></i> {{ $officeMobile }}</p>
+                    <p><i class="fa-solid fa-phone-office"></i> {{ $principalMobile }}</p>
                     <p><i class="fa-solid fa-envelopes"></i> {{ $officeMail }}</p>
                     <p><i class="fa-brands fa-square-whatsapp"></i> {{ $officeMobile }}</p>
                     <p><i class="fa-brands fa-square-facebook"></i> {{ $insName }}</p>
@@ -145,13 +145,13 @@
             <div class="p-2">
                 <div class="row">
                     <div class="col-md-6 col-12">
-                        <p><span class="fw-bold">Planning and Implementation:</span> Principal(SBC)</p>
+                        <p><span class="fw-bold">Planning and Implementation:</span> Principal({{ $insName }})</p>
                     </div>
                     <div class="col-md-6 col-12">
                         <p><span class="fw-bold">Powered By:</span> VITP IMS(Version 2.0.1) by Virtual IT Professional</p>
                     </div>
                     <div class="col-12">
-                        <p class="fw-bold">Copyright &copy; 2000-2023 | All Rights Reserved SBC Cumilla</p>
+                        <p class="fw-bold">Copyright &copy; {{ date('Y') }} | All Rights Reserved {{ $insName }}</p>
                     </div>
                 </div>
             </div>

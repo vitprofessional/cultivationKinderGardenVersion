@@ -21,7 +21,7 @@ Syllabus
 }
 
 </style>
-   <div class="container">
+   <div class="container row">
        <div calss="row text-center">
            <div class="col-md-12">
                <div class="contactHeading">
@@ -29,7 +29,7 @@ Syllabus
                </div>
            </div>
         </div> 
-        <div class='row'>
+        <div class='row col-10 mx-auto'>
             @if(Session::get('success'))
               <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
