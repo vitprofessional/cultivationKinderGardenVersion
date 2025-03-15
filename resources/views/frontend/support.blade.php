@@ -21,15 +21,15 @@ Syllabus
 }
 
 </style>
-   <div class="container row">
-       <div calss="row text-center">
+   <div class="container">
+        <div calss="row text-center">
            <div class="col-md-12">
                <div class="contactHeading">
                    Get In <span>Touch</span>
                </div>
            </div>
         </div> 
-        <div class='row col-10 mx-auto'>
+        <div class='row'>
             @if(Session::get('success'))
               <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">

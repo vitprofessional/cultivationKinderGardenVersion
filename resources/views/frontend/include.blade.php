@@ -39,7 +39,7 @@
         </style>
     </head>
     <body>
-        <div class="menubar">
+        <div class="menubar mb-4">
             <div class="container">
                 <div class="row align-items-center p-2">
                     <div class="col-12 col-md-2 text-center">
@@ -80,14 +80,10 @@
                                                 <li><a class="dropdown-item" href="{{route('newSemister')}}">Semister Plans</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('internalResult')}}">
                                                 Result Archive
                                             </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="{{route('internalResult')}}">Internal Result</a></li>
-                                                <li><a class="dropdown-item" href="{{route('individualResult')}}">Individual Result</a></li>
-                                            </ul>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -112,7 +108,9 @@
         @yield('sliderninfo')
         <div class="container-fluid">
             <div class="row">
-                @yield('frontcontent')
+                <div class="col-10 mx-auto row">
+                    @yield('frontcontent')
+                </div>
             </div>
         </div>
         <footer class="mt-5 container-fluid">

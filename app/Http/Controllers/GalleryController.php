@@ -151,7 +151,7 @@ class GalleryController extends Controller
         if(!empty($requ->avatar)):
             $stdAvatar = $requ->file('avatar');
             $newAvatar = rand().date('Ymd').'.'.$stdAvatar->getClientOriginalExtension();
-            $stdAvatar->move(public_path('upload/image/PhotoGallery/'),$newAvatar);
+            $stdAvatar->move(public_path('upload/image/slider/'),$newAvatar);
 
             $item->avatar = $newAvatar;
         endif;
@@ -173,8 +173,8 @@ class GalleryController extends Controller
         $item = SliderManage::find($id);
         // return public_path('upload/image/cultivation/syllabus/').$item->attachment;
         if(!empty($item)):
-            if(File::exists(public_path('upload/image/PhotoGallery/').$item->avatar)):
-                File::delete(public_path('upload/image/PhotoGallery/').$item->avatar);
+            if(File::exists(public_path('upload/image/slider/').$item->avatar)):
+                File::delete(public_path('upload/image/slider/').$item->avatar);
             endif;
             $item->avatar = NULL;
             $item->save();
@@ -187,8 +187,8 @@ class GalleryController extends Controller
     public function delSlider($id){
         $item = SliderManage::find($id);
         if(!empty($item)):
-            if(File::exists(public_path('upload/image/PhotoGallery/').$item->avatar)):
-                File::delete(public_path('upload/image/PhotoGallery/').$item->avatar);
+            if(File::exists(public_path('upload/image/slider/').$item->avatar)):
+                File::delete(public_path('upload/image/slider/').$item->avatar);
             endif;
             $item->delete();
             return back()->with('success','Item deleted successfully');
