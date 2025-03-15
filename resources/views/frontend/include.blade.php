@@ -108,7 +108,7 @@
         @yield('sliderninfo')
         <div class="container-fluid">
             <div class="row">
-                <div class="col-10 mx-auto row">
+                <div class="col-11 mx-auto row">
                     @yield('frontcontent')
                 </div>
             </div>

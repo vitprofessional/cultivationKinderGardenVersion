@@ -1,7 +1,7 @@
 @php
     $sliderDetails = \App\Models\SliderManage::orderBy('id','DESC')->get();
 @endphp
-<div class="row">
+<div class="row" style="margin-top: -1.5rem">
     <div class="col-12">
         <div id="carouselExampleCaptions" class="carousel slide">
             @if($sliderDetails->isEmpty())
